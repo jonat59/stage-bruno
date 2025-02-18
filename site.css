@@ -2,33 +2,76 @@ img {
   max-width: 50%;
 }
 
-html {
-  border-color: red;
-  border-width: 2px;
-  border-style: solid;
-}
-
 header {
+  background-color: #9e788f;
   display: flex;
   flex-direction: column;
-  /*justify-content: space-between; */
+  justify-content: space-between;
   /* id="logo" */
-}
-#logo img {
-  height: 60px;
-}
-& nav {
-  flex-grow: 1;
-  & ul {
-    list-style-type: none;
-    justify-content: space-around;
-    height: 100%;
-    align-items: center;
+  & #banniere {
+    text-align: center;
+    display: none;
+  }
+  & .flex {
     display: flex;
-    & li {
-      & a {
-        text-decoration: none;
+    justify-content: space-between;
+  }
+  & #logo img {
+    height: 100px;
+    width: 500px;
+  }
+  & nav {
+    & ul {
+      list-style-type: none;
+      justify-content: space-around;
+      height: 100%;
+      align-items: center;
+      display: flex;
+      padding: 80px;
+      gap: 170px;
+      & li {
+        & a {
+          text-decoration: none;
+        }
       }
     }
+  }
+}
+main {
+  text-align: center;
+  & section#hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url("./fourgon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    & #hero-content {
+      width: 50%;
+      & h1 {
+        background-color: aqua;
+        padding: 8px;
+      }
+      & p {
+        text-align: left;
+        padding: 16px;
+      }
+    }
+  }
+  & section#a-propos {
+    padding-top: 70px;
+    height: 200px;
+    background-color: #7cdedc;
+  }
+  & section#experiences {
+    padding-top: 70px;
+    height: 500px;
+    background-color: #a9b3ce;
+  }
+  & section#contact {
+    padding-top: 70px;
+    height: 800px;
+    background-color: #9e788f;
   }
 }
