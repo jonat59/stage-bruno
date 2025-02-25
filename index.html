@@ -4,24 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mon site web</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./site.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
-      <nav>
-        <div id="banniere">toto</div>
-        
-        <div class="flex">
-          <div id="logo">
-            <img src="./logo_abc.jpg" alt="image logo du site monsiteweb" />
-            <p>Innovons le chemin ensemble</p>
-          </div>
+      <div id="banniere">toto</div>
+      <div id="nav">
+        <div id="logo">
+          <img src="./Untitled.png" alt="image logo du site monsiteweb" />
+        </div>
+        <nav>
           <ul>
-          <li><a href="/">Accueil</a></li>
-            <li><a href="#a-propos">A propos</a></li>
-            <li><a href="#experiences">Expériences</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#hero-content">Livraisons</a></li>
+            <li><a href="#hero-content-2">Demenagement</a></li>
+            <li><a href="#hero-content-3">Netoyage industriel</a></li>
+            <li><a href="#hero-content-4">Devis et Fournisseurs</a></li>
           </ul>
         </nav>
       </div>
@@ -29,17 +48,149 @@
     <main>
       <section id="hero">
         <div id="hero-content">
-          <h1>ABC Transports</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic commodi
-            sapiente quam saepe earum distinctio.
-          </p>
-          <button>En savoir plus</button>
+          <div id="container">
+            <div>
+              <img src="electro.jpg" alt="Une belle image" />
+            </div>
+            <div class="content">
+              <p>
+                Le métier de livreur en électroménager consiste à assurer la
+                livraison et l’installation d’appareils électroménagers chez les
+                clients. Ce professionnel est chargé de transporter des
+                équipements tels que des réfrigérateurs, des machines à laver ou
+                des fours en veillant à leur bon état pendant le trajet. Il doit
+                également effectuer l’installation des appareils, les raccorder
+                aux réseaux d’eau et d’électricité si nécessaire, et parfois
+                réaliser des tests pour s’assurer de leur bon fonctionnement. En
+                plus de la manutention, le livreur en électroménager joue un
+                rôle de conseiller auprès des clients, en leur expliquant le
+                fonctionnement de leurs nouveaux équipements et en leur donnant
+                des recommandations d’entretien. Ce métier demande une bonne
+                condition physique, un sens du service et des compétences
+                techniques pour assurer une installation conforme aux normes de
+                sécurité.
+              </p>
+              <a href="livraison.html">
+                <button class="btn">
+                  <span class="btn-text-one">En savoir plus</span>
+                  <span class="btn-text-two">C'est parti !</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="hero-content-2">
+          <div id="container">
+            <div>
+              <img src="demenagement.jpg" alt="Une belle image" />
+            </div>
+            <div class="content">
+              <p>
+                Le métier de déménageur consiste à assurer le transport des
+                biens et des meubles d’un lieu à un autre, que ce soit pour des
+                particuliers ou des entreprises. Ce professionnel est chargé de
+                l’emballage, du chargement, du transport et du déchargement des
+                objets en veillant à leur protection pour éviter tout dommage.
+                Il peut également démonter et remonter certains meubles,
+                utiliser du matériel spécifique comme des monte-meubles et
+                organiser l’agencement des objets dans le camion pour optimiser
+                l’espace et garantir leur sécurité. Le déménageur doit faire
+                preuve de rigueur, de force physique et d’un bon sens de
+                l’organisation. Il est aussi en contact direct avec les clients,
+                ce qui nécessite des qualités relationnelles et un bon esprit
+                d’équipe pour assurer un service efficace et professionnel.
+              </p>
+              <button class="btn">
+                <span class="btn-text-one">En savoir plus</span>
+                <span class="btn-text-two">C'est parti !</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="hero-content-3">
+          <div id="container">
+            <div>
+              <img src="nettoyage.jpg" alt="Une belle image" />
+            </div>
+            <div class="content">
+              <p>
+                Le métier de nettoyeur industriel consiste à assurer l’entretien
+                et le nettoyage en profondeur de locaux professionnels,
+                d’usines, d’entrepôts ou de sites de production. Ce
+                professionnel utilise du matériel et des produits spécifiques
+                pour garantir l’hygiène et la propreté des espaces, en
+                respectant des normes strictes, notamment dans les secteurs
+                sensibles comme l’agroalimentaire, la chimie ou la santé. Il
+                peut être amené à manipuler des machines de nettoyage haute
+                pression, des aspirateurs industriels ou encore des produits
+                détergents puissants. En fonction du lieu d’intervention, le
+                nettoyeur industriel doit parfois travailler en hauteur, dans
+                des environnements difficiles ou en horaires décalés. Ce métier
+                demande de la rigueur, une bonne condition physique et un
+                respect strict des consignes de sécurité pour éviter tout risque
+                lié aux produits chimiques ou aux machines utilisées.
+              </p>
+              <button class="btn">
+                <span class="btn-text-one">En savoir plus</span>
+                <span class="btn-text-two">C'est parti !</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="hero-content-4">
+          <div id="container">
+            <div>
+              <img src="fournisseurs.jpg" alt="Une belle image" />
+            </div>
+            <div class="content">
+              <p>
+                Ce lien vous permet d’accéder directement aux fournisseurs et
+                aux devis associés. En cliquant dessus, vous pourrez consulter
+                une liste de nos partenaires fournisseurs ainsi que les
+                différentes propositions tarifaires disponibles. Cela vous
+                permet de comparer les offres, d’obtenir des informations
+                détaillées sur les produits et services proposés, et de choisir
+                la solution la plus adaptée à vos besoins. Que ce soit pour une
+                demande de devis ou pour découvrir les options disponibles, cet
+                espace facilite vos démarches et vous assure un accès rapide aux
+                informations essentielles.
+              </p>
+              <a href="livraison.html">
+                <button class="btn">
+                  <span class="btn-text-one">En savoir plus</span>
+                  <span class="btn-text-two">C'est parti !</span>
+                </button>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
-      <section id="a-propos">a-propos</section>
-      <section id="experiences">experiences</section>
-      <section id="contact">contact</section>
     </main>
+    <footer>
+      <div id="grid">
+        <div id="logo">
+          <a href="/">
+            <img src="logo_abc.jpg" alt="logo entreprise" />
+            <span>Mon site</span>
+          </a>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li><a href="">Mentions Légales</a></li>
+            <li><a href="">Politiques de confidentialité</a></li>
+            <li><a href="">A Propos</a></li>
+          </ul>
+        </nav>
+        <div id="réseaux">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div id="Copyright">
+          <span>&copy; 2025 - Tous droits réservés</span
+          ><span>Made with &#10084;&#65039; by Jonathan </span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
