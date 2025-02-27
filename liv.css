@@ -47,17 +47,94 @@ header {
   }
 }
 nav {
-  text-align: center;
-  background-color: #0056b3;
+  list-style-type: none;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  background-color: #fec195;
   padding: 10px;
 }
 nav a {
-  color: white;
   text-decoration: none;
   margin: 0 15px;
   font-size: 18px;
 }
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: space-around;
+  font-family: fantasy;
+  font-size: xx-large;
+}
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative; /* Nécessaire pour les menus déroulants */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #02449b;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none; /* Masquer le menu par défaut */
+  position: absolute;
+  top: 100%; /* Positionner le menu juste en dessous */
+  left: 0;
+  background-color: #fec195;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  min-width: 150px;
+  flex-direction: column;
+  z-index: 1000; /* Assurez-vous que le menu est au-dessus des autres éléments */
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+  color: #02449b;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+/* Lors du survol de l'élément parent (li) ou du menu déroulant, on affiche le menu */
+.dropdown:hover .dropdown-menu {
+  display: block; /* Afficher le menu lors du survol */
+}
+
+/* Effet de survol */
+.nav-links li a:hover {
+  background-color: #fec195;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #fec195;
+}
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 80%;
   margin: auto;
   padding: 20px;
@@ -66,18 +143,195 @@ nav a {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
-.button {
-  display: inline-block;
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px;
+button {
+  position: relative;
+  padding: 12px 35px;
+  background: #fec195;
+  font-family: fantasy;
+  font-size: 17px;
+  font-weight: 500;
+  color: #181818;
+  border: 3px solid #fec195;
+  border-radius: 8px;
+  box-shadow: 0 0 0 #fec1958c;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.star-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s ease;
+}
+
+button:hover {
+  background: transparent;
+  color: #fec195;
+  box-shadow: 0 0 25px #fec1958c;
+}
+
+button:hover .star-1 {
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 115%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-6 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.fil0 {
+  fill: #fffdef;
 }
 div#accueil {
-  background-color: aqua;
+  background-color: #8b97ad;
+  & p2 {
+    font-family: Atkinson;
+    font-size: 1rem;
+    font-weight: 200;
+    color: black;
+    letter-spacing: 3px;
+    text-transform: none;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 20px;
+  }
 }
+h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & p {
+    font-family: fantasy;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #f98b08;
+    letter-spacing: 3px;
+    text-transform: none;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #004698;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 2.5rem; /* Ajuste la taille sur les petits écrans */
+  }
+}
+
 footer {
   background: gray;
   padding: 4px 0;
