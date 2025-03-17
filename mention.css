@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #007bff, #ff8c00);
+  color: #333;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px;
+  background-image: url("./route.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  /* id="logo" */
+  & #banniere {
+    text-align: center;
+    display: none;
+  }
+  & #nav {
+    display: flex;
+  }
+  & .flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+  }
+  & .global {
+    border: 2px solid red;
+    min-height: 100px;
+    width: 200px;
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  & #logo {
+    max-width: 350px;
+    min-width: 100px;
+  }
+  & nav {
+    flex-grow: 1;
+    & ul {
+      list-style-type: none;
+      justify-content: space-around;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      display: flex;
+      gap: 25px;
+      & li {
+        display: flex;
+        justify-content: center;
+        & a {
+          text-decoration: none;
+          color: white;
+          font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+          font-size: x-large;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #007bff, #ff8c00);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #007bff;
+}
+footer {
+  background: linear-gradient(135deg, #007bff, #ff8c00);
+  padding: 4px 0;
+  & #grid {
+    padding: 10px 3rem;
+    display: grid;
+    grid-template-areas: "a b c" "d d d";
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+  & #logo {
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+    max-width: 150px;
+    width: 60%;
+  }
+  & nav#nav {
+    grid-area: b;
+    & ul {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      justify-content: space-between;
+      font-family: fantasy;
+      font-size: large;
+      color: #000;
+      align-items: center;
+      gap: 10px;
+    }
+    & a {
+      text-decoration: none;
+    }
+  }
+  & #Réseaux {
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    & a {
+      font-size: 1.8rem;
+    }
+  }
+  & #Copyright {
+    grid-area: d;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header {
+    & div#logo {
+      display: flex;
+    }
+    & nav {
+      display: flex;
+      & ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  }
+  footer {
+    background: linear-gradient(135deg, #007bff, #ff8c00);
+    padding: 4px 0;
+    & #grid {
+      padding: 10px 3rem;
+      display: grid;
+      grid-template-areas: "a a a" "b b b" "c c c" "d d d";
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+    }
+    & #logo {
+      grid-area: a;
+      display: flex;
+      flex-direction: column;
+      max-width: 150px;
+      width: 60%;
+      align-items: center;
+    }
+    & nav#nav {
+      grid-area: b;
+      & ul {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+        padding-left: 50px;
+        font-family: fantasy;
+        font-size: large;
+        color: #000;
+        align-items: center;
+        padding: 20px;
+        gap: 10px;
+      }
+    }
+    & #Réseaux {
+      grid-area: c;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; /* Répartit uniformément */
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+    }
+    & #Copyright {
+      grid-area: d;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 2rem;
+    }
+  }
+}

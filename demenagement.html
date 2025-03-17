@@ -1,9 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="ABC Transport - Services de livraison, déménagement et nettoyage industriel. Demandez un devis en ligne !"
+    />
+    <title>ABC</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./demenagement.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div id="banniere"><h1>ABC Transport</h1></div>
+      <div id="nav">
+        <div id="logo">
+          <a href="index.html">
+            <img src="./Untitled.png" alt="Logo du site ABC Transport" />
+          </a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html#hero-content">Livraisons</a></li>
+            <li><a href="index.html#hero-content-2">Déménagements</a></li>
+            <li>
+              <a href="index.html#hero-content-3">Nettoyages Industriels</a>
+            </li>
+            <li>
+              <a href="index.html#hero-content-4">Fournisseurs et Devis</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <script src="script.js"></script>
+    <main>
+      <section id="accueil" class="hero">
+        <div class="hero-content">
+          <h2>Votre déménagement en toute sérénité</h2>
+          <p>
+            Nous vous offrons des services de déménagement rapides, sûrs et
+            efficaces, à des prix compétitifs.
+          </p>
+          <a href="#contact" class="btn">Demandez un devis</a>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <h2>Nos Services</h2>
+        <div class="service-item">
+          <h3>Déménagement résidentiel</h3>
+          <p>
+            Nous transportons vos biens en toute sécurité, que vous déménagiez à
+            l'échelle locale ou nationale.
+          </p>
+        </div>
+        <div class="service-item">
+          <h3>Déménagement d'entreprise</h3>
+          <p>
+            Nos équipes spécialisées prennent en charge le déménagement de votre
+            entreprise, en minimisant les interruptions de votre activité.
+          </p>
+        </div>
+        <div class="service-item">
+          <h3>Emballage et déballage</h3>
+          <p>
+            Nous nous occupons de l'emballage et du déballage de vos objets
+            fragiles pour une sécurité maximale.
+          </p>
+        </div>
+      </section>
+
+      <section id="temoignages" class="temoignages">
+        <h2>Ce que nos clients disent de nous</h2>
+        <div class="temoignage">
+          <p>
+            "Un service impeccable et rapide! Nous avons été totalement
+            satisfaits de notre déménagement. Merci à l'équipe!"
+          </p>
+          <p>- Jean Dupont</p>
+        </div>
+        <div class="temoignage">
+          <p>
+            "Des déménageurs très professionnels et à l'écoute. Je recommande
+            vivement!"
+          </p>
+          <p>- Marie Martin</p>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>Contactez-nous</h2>
+        <form action="#" method="POST">
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit" class="btn">Envoyer</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div id="grid">
+        <div id="logo">
+          <a href="index.html">
+            <img src="logo_abc.jpg" alt="logo entreprise" />
+          </a>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li><a href="mentionslegales.html">Mentions Légales</a></li>
+            <li><a href="politique.html">Politiques de confidentialité</a></li>
+            <li><a href="propos.html">A Propos</a></li>
+          </ul>
+        </nav>
+        <div id="Réseaux">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div id="Copyright">
+          <span>&copy; 2025 - Tous droits réservés</span
+          ><span>Made with &#10084;&#65039; by Jonathan </span>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
