@@ -1,17 +1,9 @@
-// Toggle navigation menu for mobile view
-const menuToggleButton = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav-links");
 
-menuToggleButton.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-
-// Add smooth scroll behavior to anchor links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    burger.classList.toggle("toggle");
   });
 });

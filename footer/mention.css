@@ -11,25 +11,37 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #007bff, #ff8c00);
-  color: #333;
+  background-image: url("/footer/téléchargement.jpg");
+  color: rgb(39, 39, 167);
 }
 header {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   padding: 16px;
-  background-image: url("./route.jpg");
+  background-image: url("/page_accueil/images/route.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100%;
-  /* id="logo" */
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  justify-content: center;
   & #banniere {
     text-align: center;
     display: none;
   }
+  & #logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
   & #nav {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   & .flex {
     display: flex;
@@ -46,34 +58,96 @@ header {
     justify-content: center;
     align-items: center;
   }
-  & #logo {
-    max-width: 350px;
-    min-width: 100px;
+
+  nav {
+    list-style-type: none;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    flex-direction: column;
   }
-  & nav {
-    flex-grow: 1;
-    & ul {
-      list-style-type: none;
-      justify-content: space-around;
-      height: 100%;
-      width: 100%;
-      align-items: center;
-      display: flex;
-      gap: 25px;
-      & li {
-        display: flex;
-        justify-content: center;
-        & a {
-          text-decoration: none;
-          color: white;
-          font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-          font-size: x-large;
-          font-weight: 500;
-        }
-      }
-    }
+  nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
   }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-around;
+    font-family: fantasy;
+    font-size: xx-large;
+  }
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links li {
+    position: relative; /* Nécessaire pour les menus déroulants */
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    display: none; /* Masquer le menu par défaut */
+    position: absolute;
+    top: 100%; /* Positionner le menu juste en dessous */
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    min-width: 150px;
+    flex-direction: column;
+    z-index: 1000; /* Assurez-vous que le menu est au-dessus des autres éléments */
+  }
+
+  .dropdown-menu li {
+    background-color: #02449b;
+    padding: 10px 20px;
+  }
+
+  .dropdown-menu li a {
+    color: #f88903;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Lors du survol de l'élément parent (li) ou du menu déroulant, on affiche le menu */
+  .dropdown:hover .dropdown-menu {
+    display: block; /* Afficher le menu lors du survol */
+  }
+
+  /* Effet de survol */
+  .nav-links li a:hover {
+    background-color: #02449b;
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: #004698;
+  }
+}
+
+section:nth-child(even) {
+  background: var(--bg-dark);
 }
 main {
   max-width: 800px;
@@ -89,7 +163,7 @@ section {
 }
 
 h2 {
-  color: #007bff;
+  color: orange;
 }
 footer {
   background: linear-gradient(135deg, #007bff, #ff8c00);
@@ -145,7 +219,7 @@ footer {
 }
 @media only screen and (max-width: 768px) {
   header {
-    & div#logo {
+    & #logo {
       display: flex;
     }
     & nav {
@@ -153,10 +227,11 @@ footer {
       & ul {
         display: flex;
         flex-direction: column;
-        align-items: stretch;
+        align-items: flex-start;
       }
     }
   }
+
   footer {
     background: linear-gradient(135deg, #007bff, #ff8c00);
     padding: 4px 0;

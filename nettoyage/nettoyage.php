@@ -22,8 +22,8 @@
       href="/favicon/apple-touch-icon.png"
     />
     <link rel="manifest" href="/favicon/site.webmanifest" />
-    <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="./site.css" />
+    <link rel="stylesheet" href="/page_accueil/reset.css" />
+    <link rel="stylesheet" href="/nettoyage/nettoyage.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -37,38 +37,49 @@
       <div id="banniere"><h1>ABC Transport</h1></div>
       <div id="nav">
         <div id="logo">
-          <a href="index.html">
-            <img src="./Untitled.png" alt="Logo du site ABC Transport" />
+          <a href="/page_accueil/index.php">
+            <img
+              src="/page_accueil/images/Untitled.png"
+              alt="Logo du site ABC Transport"
+            />
           </a>
         </div>
         <nav>
           <ul>
-            <li><a href="index.html#hero-content">Livraisons</a></li>
-            <li><a href="index.html#hero-content-2">Déménagements</a></li>
             <li>
-              <a href="index.html#hero-content-3">Nettoyages Industriels</a>
+              <a href="/livraison/livraison.php">LIVRAISONS ÉLECTROMÉNAGERS</a>
+            </li>
+            <li><a href="/demenagement/demenagement.php">DÉMÉNAGEMENTS</a></li>
+            <li>
+              <a href="/nettoyage/nettoyage.php">NETTOYAGES INDUSTRIELS</a>
             </li>
             <li>
-              <a href="index.html#hero-content-4">Fournisseurs et Devis</a>
+              <a href="/fournisseurs/fournisseurs.php">CONTACT GROSSISTES</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-    <script src="script.js"></script>
-    <main></main>
+    <main>
+
+    </main>
     <footer>
       <div id="grid">
         <div id="logo">
-          <a href="index.html">
-            <img src="logo_abc.jpg" alt="logo entreprise" />
+          <a href="/page_accueil/index.php">
+            <img
+              src="/page_accueil/images/logo_abc.jpg"
+              alt="logo entreprise"
+            />
           </a>
         </div>
         <nav id="nav">
           <ul>
-            <li><a href="mentionslegales.html">Mentions Légales</a></li>
-            <li><a href="politique.html">Politiques de confidentialité</a></li>
-            <li><a href="propos.html">A Propos</a></li>
+            <li><a href="/footer/mentionslegales.php">Mentions Légales</a></li>
+            <li>
+              <a href="/footer/politique.php">Politiques de confidentialité</a>
+            </li>
+            <li><a href="/footer/propos.php">A Propos</a></li>
           </ul>
         </nav>
         <div id="Réseaux">
